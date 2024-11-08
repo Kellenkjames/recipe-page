@@ -1,1 +1,453 @@
-/* You can add global styles to this file, and also import other style files */
+// -----------------------------------------------------
+// Global Styles
+// -----------------------------------------------------
+
+// Set the root font-size for easy rem calculations (1 rem = 10px)
+html {
+  font-size: 62.5%; // 62.5% of the default 16px = 10px
+}
+
+// -----------------------------------------------------
+// Fonts
+// -----------------------------------------------------
+
+@font-face {
+  font-family: 'Young Serif';
+  font-weight: 400;
+  src: url('assets/fonts/static/YoungSerif-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Outfit';
+  font-weight: 400;
+  src: url('assets/fonts/static/Outfit-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Outfit';
+  font-weight: 600;
+  src: url('assets/fonts/static/Outfit-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Outfit';
+  font-weight: 700;
+  src: url('assets/fonts/static/Outfit-Bold.ttf') format('truetype');
+}
+
+// -----------------------------------------------------
+// Typography
+// -----------------------------------------------------
+
+$font-serif: 'Young Serif', serif;
+$font-sans: 'Outfit', sans-serif;
+$font-weight-regular: 400;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+// Typography Mixins
+@mixin text-preset-1 {
+  font-family: $font-serif;
+  font-weight: $font-weight-regular;
+  font-size: 4rem; // 40px
+  line-height: 1; // 100%
+  letter-spacing: 0;
+}
+
+@mixin text-preset-2 {
+  font-family: $font-serif;
+  font-weight: $font-weight-regular;
+  font-size: 2.8rem; // 28px
+  line-height: 1; // 100%
+  letter-spacing: 0;
+}
+
+@mixin text-preset-3 {
+  font-family: $font-sans;
+  font-weight: $font-weight-semibold;
+  font-size: 2rem; // 20px
+  line-height: 1; // 100%
+  letter-spacing: 0;
+}
+
+@mixin text-preset-4 {
+  font-family: $font-sans;
+  font-weight: $font-weight-regular;
+  font-size: 1.6rem; // 16px
+  line-height: 1.5; // 150%
+  letter-spacing: 0;
+}
+
+@mixin text-preset-4-bold {
+  font-family: $font-sans;
+  font-weight: $font-weight-bold;
+  font-size: 1.6rem; // 16px
+  line-height: 1.5; // 150%
+  letter-spacing: 0;
+}
+
+// -----------------------------------------------------
+// Colors
+// -----------------------------------------------------
+
+$color-white: hsl(0, 0%, 100%);
+$color-stone-100: hsl(30, 54%, 90%);
+$color-stone-150: hsl(30, 18%, 87%);
+$color-stone-600: hsl(30, 10%, 34%);
+$color-stone-900: hsl(24, 5%, 18%);
+$color-brown-800: hsl(14, 45%, 36%);
+$color-rose-800: hsl(332, 51%, 32%);
+$color-rose-50: hsl(330, 100%, 98%);
+
+// -----------------------------------------------------
+// Layout Breakpoints
+// -----------------------------------------------------
+
+$mobile-width: 37.5rem; // 375px
+$desktop-width: 144rem; // 1440px
+
+// -----------------------------------------------------
+// Spacing Variables
+// -----------------------------------------------------
+
+$spacing-xxl: 12.8rem; // 128px
+$spacing-xl: 4.8rem; // 48px
+$spacing-lg: 4rem; // 40px
+$spacing-md: 3.2rem; // 32px
+$spacing-sm: 2.4rem; // 24px
+$spacing-xs: 1.6rem; // 16px
+$spacing-xxs: 1.2rem; // 12px
+$spacing-xxxs: 0.8rem; // 8px
+$spacing-xxxxs: 0.4rem; // 4px
+
+// Utility classes for padding (all sides)
+.p-xxl {
+  padding: $spacing-xxl;
+}
+.p-xl {
+  padding: $spacing-xl;
+}
+.p-lg {
+  padding: $spacing-lg;
+}
+.p-md {
+  padding: $spacing-md;
+}
+.p-sm {
+  padding: $spacing-sm;
+}
+.p-xs {
+  padding: $spacing-xs;
+}
+.p-xxs {
+  padding: $spacing-xxs;
+}
+.p-xxxs {
+  padding: $spacing-xxxs;
+}
+.p-xxxxs {
+  padding: $spacing-xxxxs;
+}
+
+// Padding directional classes
+.pt-xxl {
+  padding-top: $spacing-xxl;
+}
+.pb-xxl {
+  padding-bottom: $spacing-xxl;
+}
+.pl-xxl {
+  padding-left: $spacing-xxl;
+}
+.pr-xxl {
+  padding-right: $spacing-xxl;
+}
+
+.pt-xl {
+  padding-top: $spacing-xl;
+}
+.pb-xl {
+  padding-bottom: $spacing-xl;
+}
+.pl-xl {
+  padding-left: $spacing-xl;
+}
+.pr-xl {
+  padding-right: $spacing-xl;
+}
+
+.pt-lg {
+  padding-top: $spacing-lg;
+}
+.pb-lg {
+  padding-bottom: $spacing-lg;
+}
+.pl-lg {
+  padding-left: $spacing-lg;
+}
+.pr-lg {
+  padding-right: $spacing-lg;
+}
+
+.pt-md {
+  padding-top: $spacing-md;
+}
+.pb-md {
+  padding-bottom: $spacing-md;
+}
+.pl-md {
+  padding-left: $spacing-md;
+}
+.pr-md {
+  padding-right: $spacing-md;
+}
+
+.pt-sm {
+  padding-top: $spacing-sm;
+}
+.pb-sm {
+  padding-bottom: $spacing-sm;
+}
+.pl-sm {
+  padding-left: $spacing-sm;
+}
+.pr-sm {
+  padding-right: $spacing-sm;
+}
+
+.pt-xs {
+  padding-top: $spacing-xs;
+}
+.pb-xs {
+  padding-bottom: $spacing-xs;
+}
+.pl-xs {
+  padding-left: $spacing-xs;
+}
+.pr-xs {
+  padding-right: $spacing-xs;
+}
+
+.pt-xxs {
+  padding-top: $spacing-xxs;
+}
+.pb-xxs {
+  padding-bottom: $spacing-xxs;
+}
+.pl-xxs {
+  padding-left: $spacing-xxs;
+}
+.pr-xxs {
+  padding-right: $spacing-xxs;
+}
+
+.pt-xxxs {
+  padding-top: $spacing-xxxs;
+}
+.pb-xxxs {
+  padding-bottom: $spacing-xxxs;
+}
+.pl-xxxs {
+  padding-left: $spacing-xxxs;
+}
+.pr-xxxs {
+  padding-right: $spacing-xxxs;
+}
+
+.pt-xxxxs {
+  padding-top: $spacing-xxxxs;
+}
+.pb-xxxxs {
+  padding-bottom: $spacing-xxxxs;
+}
+.pl-xxxxs {
+  padding-left: $spacing-xxxxs;
+}
+.pr-xxxxs {
+  padding-right: $spacing-xxxxs;
+}
+
+// Utility classes for margin (all sides)
+.m-xxl {
+  margin: $spacing-xxl;
+}
+.m-xl {
+  margin: $spacing-xl;
+}
+.m-lg {
+  margin: $spacing-lg;
+}
+.m-md {
+  margin: $spacing-md;
+}
+.m-sm {
+  margin: $spacing-sm;
+}
+.m-xs {
+  margin: $spacing-xs;
+}
+.m-xxs {
+  margin: $spacing-xxs;
+}
+.m-xxxs {
+  margin: $spacing-xxxs;
+}
+.m-xxxxs {
+  margin: $spacing-xxxxs;
+}
+
+// Margin directional classes
+.mt-xxl {
+  margin-top: $spacing-xxl;
+}
+.mb-xxl {
+  margin-bottom: $spacing-xxl;
+}
+.ml-xxl {
+  margin-left: $spacing-xxl;
+}
+.mr-xxl {
+  margin-right: $spacing-xxl;
+}
+
+.mt-xl {
+  margin-top: $spacing-xl;
+}
+.mb-xl {
+  margin-bottom: $spacing-xl;
+}
+.ml-xl {
+  margin-left: $spacing-xl;
+}
+.mr-xl {
+  margin-right: $spacing-xl;
+}
+
+.mt-lg {
+  margin-top: $spacing-lg;
+}
+.mb-lg {
+  margin-bottom: $spacing-lg;
+}
+.ml-lg {
+  margin-left: $spacing-lg;
+}
+.mr-lg {
+  margin-right: $spacing-lg;
+}
+
+.mt-md {
+  margin-top: $spacing-md;
+}
+.mb-md {
+  margin-bottom: $spacing-md;
+}
+.ml-md {
+  margin-left: $spacing-md;
+}
+.mr-md {
+  margin-right: $spacing-md;
+}
+
+.mt-sm {
+  margin-top: $spacing-sm;
+}
+.mb-sm {
+  margin-bottom: $spacing-sm;
+}
+.ml-sm {
+  margin-left: $spacing-sm;
+}
+.mr-sm {
+  margin-right: $spacing-sm;
+}
+
+.mt-xs {
+  margin-top: $spacing-xs;
+}
+.mb-xs {
+  margin-bottom: $spacing-xs;
+}
+.ml-xs {
+  margin-left: $spacing-xs;
+}
+.mr-xs {
+  margin-right: $spacing-xs;
+}
+
+.mt-xxs {
+  margin-top: $spacing-xxs;
+}
+.mb-xxs {
+  margin-bottom: $spacing-xxs;
+}
+.ml-xxs {
+  margin-left: $spacing-xxs;
+}
+.mr-xxs {
+  margin-right: $spacing-xxs;
+}
+
+.mt-xxxs {
+  margin-top: $spacing-xxxs;
+}
+.mb-xxxs {
+  margin-bottom: $spacing-xxxs;
+}
+.ml-xxxs {
+  margin-left: $spacing-xxxs;
+}
+.mr-xxxs {
+  margin-right: $spacing-xxxs;
+}
+
+.mt-xxxxs {
+  margin-top: $spacing-xxxxs;
+}
+.mb-xxxxs {
+  margin-bottom: $spacing-xxxxs;
+}
+.ml-xxxxs {
+  margin-left: $spacing-xxxxs;
+}
+.mr-xxxxs {
+  margin-right: $spacing-xxxxs;
+}
+
+// -----------------------------------------------------
+// Global resets or default styles
+// -----------------------------------------------------
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $font-sans;
+  font-size: $font-size-base;
+  font-weight: $font-weight-regular;
+  line-height: 1.6;
+  color: $color-stone-900;
+  background-color: $color-stone-100;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: $font-weight-bold;
+  color: $color-stone-900;
+}
+
+p {
+  color: $color-stone-600;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
