@@ -1,0 +1,11 @@
+@import '../../styles.scss';
+
+.header {
+  &__title {
+    @include text-preset-1;
+  }
+
+  &__desc {
+    @include text-preset-4;
+  }
+}
