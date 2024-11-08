@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-top-image',
@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
   templateUrl: './top-image.component.html',
   styleUrls: ['./top-image.component.scss'],
 })
-export class TopImageComponent {}
+export class TopImageComponent {
+  @Input() imageUrl!: string;
+}

@@ -1,0 +1,11 @@
+@import '../../styles.scss';
+
+.recipe-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 4rem;
+  background-color: $color-white;
+  border-radius: 2.4rem;
+  max-width: 73.6rem;
+}
