@@ -5,8 +5,6 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './top-image.component.html',
-  styleUrl: './top-image.component.scss'
+  styleUrls: ['./top-image.component.scss'],
 })
-export class TopImageComponent {
-
-}
+export class TopImageComponent {}

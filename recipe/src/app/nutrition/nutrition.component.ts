@@ -5,8 +5,6 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './nutrition.component.html',
-  styleUrl: './nutrition.component.scss'
+  styleUrls: ['./nutrition.component.scss'],
 })
-export class NutritionComponent {
-
-}
+export class NutritionComponent {}
