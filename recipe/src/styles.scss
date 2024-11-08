@@ -45,6 +45,9 @@ $font-weight-regular: 400;
 $font-weight-semibold: 600;
 $font-weight-bold: 700;
 
+// Base Font Size
+$font-size-base: 1.6rem; // 16px
+
 // Typography Mixins
 @mixin text-preset-1 {
   font-family: $font-serif;
