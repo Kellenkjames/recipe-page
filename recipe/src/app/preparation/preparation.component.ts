@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
   templateUrl: './preparation.component.html',
   styleUrls: ['./preparation.component.scss'],
 })
-export class PreparationComponent {}
+export class PreparationComponent {
+  title = 'Preparation Time';
+  totalTime = 'Approximately 10 minutes';
+  prepartionTime = '5 minutes';
+  cookingTime = '5 minutes';
+}

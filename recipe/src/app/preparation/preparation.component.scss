@@ -1,0 +1,25 @@
+@import '../../styles.scss';
+
+.preparation {
+  padding: 2.4rem;
+  background-color: $color-rose-50;
+  border-radius: 1.2rem;
+
+  &__title {
+    @include text-preset-3;
+    color: $color-rose-800;
+  }
+
+  &__list {
+    padding: 0 2.4rem;
+
+    &__item {
+      color: $color-rose-800;
+
+      &__label,
+      &__desc {
+        color: $color-stone-600;
+      }
+    }
+  }
+}
