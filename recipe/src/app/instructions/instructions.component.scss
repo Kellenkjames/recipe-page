@@ -1,0 +1,26 @@
+@import '../../styles.scss';
+
+.instructions {
+  &__title {
+    @include text-preset-2;
+    color: $color-brown-800;
+  }
+
+  &__list {
+    padding: 0 2rem;
+    @include text-preset-4-bold;
+
+    &__item {
+      color: $color-brown-800;
+
+      &__desc {
+        font-weight: $font-weight-regular;
+      }
+
+      &__label,
+      &__desc {
+        color: $color-stone-600;
+      }
+    }
+  }
+}

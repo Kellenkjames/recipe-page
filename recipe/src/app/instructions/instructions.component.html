@@ -4,9 +4,9 @@
     @for (instruction of instructionSteps; track $index) {
     <li class="instructions__list__item pl-xs mb-xxxs">
       <strong class="instructions__list__item__label"
-        >{{ step.label }}:
+        >{{ instruction.title }}:
       </strong>
-      <span class="instructions__list__item__desc">{{ step.time }}</span>
+      <span class="instructions__list__item__desc">{{ instruction.desc }}</span>
     </li>
     }
   </ol>
