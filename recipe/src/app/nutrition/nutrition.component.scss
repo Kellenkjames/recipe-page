@@ -1,0 +1,41 @@
+@import '../../styles.scss';
+
+.nutrition {
+  &__title {
+    @include text-preset-2;
+    color: $color-brown-800;
+  }
+
+  &__list {
+    width: 100%;
+    border-collapse: collapse;
+
+    &__item {
+      width: 100%;
+
+      &__type {
+        @include text-preset-4;
+        color: $color-stone-600;
+        padding-left: 3.2rem;
+      }
+
+      &__value {
+        @include text-preset-4-bold;
+        color: $color-brown-800;
+        padding-right: 3.2rem;
+      }
+
+      &__type,
+      &__value {
+        width: 50%;
+        padding-top: 1.2rem;
+        padding-bottom: 1.2rem;
+      }
+
+      :not(:last-child) &__type,
+      :not(:last-child) &__value {
+        border-bottom: 1px solid $color-stone-150;
+      }
+    }
+  }
+}

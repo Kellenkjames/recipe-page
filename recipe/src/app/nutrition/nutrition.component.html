@@ -1,1 +1,12 @@
-<p>nutrition works!</p>
+<div class="nutrition">
+  <h3 class="nutrition__title mb-sm">{{ title }}</h3>
+  <p class="nutrition__desc mb-sm">{{ desc }}</p>
+  <table class="nutrition__list">
+    @for (item of nutritionValues; track $index) {
+    <tr class="nutrition__list__item">
+      <td class="nutrition__list__item__type">{{ item.type }}</td>
+      <td class="nutrition__list__item__value">{{ item.value }}</td>
+    </tr>
+    }
+  </table>
+</div>
