@@ -1,5 +1,10 @@
 import { Component } from '@angular/core';
 
+interface PreparationStep {
+  label: string;
+  time: string;
+}
+
 @Component({
   selector: 'app-preparation',
   standalone: true,
@@ -9,7 +14,10 @@ import { Component } from '@angular/core';
 })
 export class PreparationComponent {
   title = 'Preparation Time';
-  totalTime = 'Approximately 10 minutes';
-  prepartionTime = '5 minutes';
-  cookingTime = '5 minutes';
+
+  preparationSteps: PreparationStep[] = [
+    { label: 'Total', time: 'Approximately 10 minutes' },
+    { label: 'Preparation', time: '5 minutes' },
+    { label: 'Cooking', time: '5 minutes' },
+  ];
 }

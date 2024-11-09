@@ -1,17 +1,11 @@
 <div class="preparation">
-  <h3 class="preparation__title mb-xs">{{ title }}</h3>
+  <h3 class="preparation__title mb-sm">{{ title }}</h3>
   <ul class="preparation__list">
+    @for (step of preparationSteps; track $index) {
     <li class="preparation__list__item pl-xs mb-xxxs">
-      <strong class="preparation__list__item__label">Total: </strong>
-      <span class="preparation__list__item__desc">{{ totalTime }}</span>
+      <strong class="preparation__list__item__label">{{ step.label }}: </strong>
+      <span class="preparation__list__item__desc">{{ step.time }}</span>
     </li>
-    <li class="preparation__list__item pl-xs mb-xxxs">
-      <strong class="preparation__list__item__label">Prepartion: </strong>
-      <span class="preparation__list__item__desc">{{ prepartionTime }}</span>
-    </li>
-    <li class="preparation__list__item pl-xs mb-xxxs">
-      <strong class="preparation__list__item__label">Cooking: </strong>
-      <span class="preparation__list__item__desc">{{ cookingTime }}</span>
-    </li>
+    }
   </ul>
 </div>
