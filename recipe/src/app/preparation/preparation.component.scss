@@ -20,6 +20,10 @@
       &__desc {
         color: $color-stone-600;
       }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 }
