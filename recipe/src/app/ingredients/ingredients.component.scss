@@ -1,0 +1,25 @@
+@import '../../styles.scss';
+
+.ingredients {
+  &__title {
+    @include text-preset-2;
+    color: $color-brown-800;
+  }
+
+  &__list {
+    padding: 0 2rem;
+
+    &__item {
+      color: $color-brown-800;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &__desc {
+        @include text-preset-4;
+        color: $color-stone-600;
+      }
+    }
+  }
+}

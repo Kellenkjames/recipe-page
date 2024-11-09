@@ -1,1 +1,10 @@
-<p>ingredients works!</p>
+<div class="ingredients">
+  <h2 class="ingredients__title mb-sm">{{ title }}</h2>
+  <ul class="ingredients__list">
+    @for (ingredient of ingredientsList; track $index) {
+    <li class="ingredients__list__item pl-xs mb-xxxs">
+      <span class="ingredients__list__item__desc">{{ ingredient }}</span>
+    </li>
+    }
+  </ul>
+</div>
