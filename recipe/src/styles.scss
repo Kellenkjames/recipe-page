@@ -106,8 +106,11 @@ $color-rose-50: hsl(330, 100%, 98%);
 // Layout Breakpoints
 // -----------------------------------------------------
 
+$small-mobile-width: 20rem; // 320px (very small mobile devices)
 $mobile-width: 37.5rem; // 375px
-$desktop-width: 144rem; // 1440px
+$tablet-width: 48rem; // 768px (tablet)
+$medium-width: 64rem; // 1024px (medium screens)
+$desktop-width: 144rem; // 1440px (desktop)
 
 // -----------------------------------------------------
 // Spacing Variables
