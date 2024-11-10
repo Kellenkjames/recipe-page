@@ -13,11 +13,12 @@
 
     @media (max-width: $mobile-width) {
       padding: 0;
+      margin-bottom: 4rem;
     }
   }
 
   &__content {
-    padding: 4rem;
+    padding: 0 4rem 4rem;
 
     @media (max-width: $mobile-width) {
       padding: 0 3.2rem 3rem;
