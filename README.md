@@ -15,7 +15,7 @@ This project focuses on using semantic HTML to structure content effectively and
 
 Here is a preview of the Recipe Page Component:
 
-![Recipe Page Screenshot](./recipe-page/src/assets/images/recipe_page_screenshot.png)
+![Recipe Page Screenshot](./recipe/src/assets/images/recipe_page_screenshot.png)
 
 ## Technologies Used
 
